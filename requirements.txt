@@ -1,0 +1,6 @@
+crewai
+crewai-tools
+litellm
+ipykernel
+'litellm[proxy]'
+crewai[google-genai]
