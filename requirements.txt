@@ -4,3 +4,8 @@ litellm
 ipykernel
 'litellm[proxy]'
 crewai[google-genai]
+tavily-python
+firecrawl-py
+pypdf
+xmltodict
+langchain-community
