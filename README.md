@@ -1,7 +1,7 @@
 # GROQ_API_KEY = ""
 # GOOGLE_API_KEY =""
 # OPENROUTER_API_KEY = ""
-
+# SERPER_API_KEY =""
 inside the double quotes paste your api key
 
 #search in web similarly add tavily api key and firecrawal api key in .env file
