@@ -7,7 +7,8 @@ inside the double quotes paste your api key
 #search in web similarly add tavily api key and firecrawal api key in .env file
 
 # TAVILY_API_KEY = ""
-# FIRECRAWL_API_KEY = "
+# FIRECRAWL_API_KEY = " "
+# GOOGLE_SERPER_API_KEY = ""
 
 
 # open your vscode terminal do the following steps
