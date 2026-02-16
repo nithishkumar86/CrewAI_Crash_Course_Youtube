@@ -1,0 +1,9 @@
+researcher_tasks:
+  description: >
+    topic is {topic}.
+    The researcher is responsible for gathering and analyzing information on the specified topic.
+    The task involves collecting data from credible sources, identifying key findings, and presenting a comprehensive summary of the research.
+  expected_output: >
+    A detailed report summarizing the research findings on the specified topic,
+    including key insights and relevant data.
+  agent: researcher
