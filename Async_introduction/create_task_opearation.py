@@ -26,9 +26,10 @@ async def main():
     chapters = await asyncio.gather(*tasks)  # ← Waits here
     
     print(f"\n📚 Got all results: {chapters}")
-    print(f"length of the data is :",chapters)
+    print(f"length of the data is :",len(chapters))
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
 
 
 
@@ -68,4 +69,6 @@ asyncio.run(main())
 
 # 🎯 One Sentence Summary
 
-# "create_task() starts tasks immediately and returns Task objects. We collect these objects in a list, unpack them, and pass to gather(), which waits for ALL tasks to complete and returns results in order."
+# "create_task() starts tasks immediately and returns Task objects
+#  We collect these objects in a list, unpack them, and pass to gather(),
+#  which waits for ALL tasks to complete and returns results in order."

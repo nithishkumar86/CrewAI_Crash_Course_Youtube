@@ -17,7 +17,7 @@ import time
 #     time.sleep(1)
 #     return a / b
 
-# def main():  # coroutines
+# def main(): 
 #     start_time = time.time()
 
 #     result1 = addition(10,5)
@@ -39,7 +39,7 @@ import time
 #     main() 
 
 
-async def addition(a: int,b: int):
+async def addition(a: int,b: int): # coroutine
     await asyncio.sleep(1)
     return a + b
 
@@ -59,19 +59,18 @@ async def division(a: int,b: int):
 async def main():  # coroutines
     start_time = time.time()
 
-    response = await asyncio.gather(
-        addition(10,5),
-        subtraction(10,5),
-        multiplication(10,5),
+    response = await asyncio.gather(  # for concurrent execution
+        addition(10,5),               # waiting for all task to finish
+        subtraction(10,5),            # gather create list internally
+        multiplication(10,5),         # append the result one by one when it finishes
         division(10,5),
-
     )
     end_time = time.time()
 
     print("overall time: ",end_time-start_time)
 
-    print("overall time is: ",response)
     print("lenght of value is: ",len(response))
+    print("result is",response)
 
 if __name__ == "__main__":
     asyncio.run(main()) 
@@ -100,10 +99,10 @@ Closes the loop
 '''
 
 
-# You know:
+# # You know:
 
-# async def - Define async functions
-# await - Wait without blocking
-# create_task() - Start tasks immediately, get Task object
-# gather() - Wait for all, returns LIST
-# Use case decides the pattern
+# # async def - Define async functions
+# # await - Wait without blocking
+# # create_task() - Start tasks immediately, get Task object
+# # gather() - Wait for all, returns LIST
+# # Use case decides the pattern
