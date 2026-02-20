@@ -2,8 +2,8 @@ import asyncio
 import time
 
 # def task(name,seconds):
-#     print(f"{name} starts")
-#     time.sleep(seconds) → blocks entire event loop
+#     print(f"name {name} starts")
+#     time.sleep(seconds) # → blocks entire event loop
 #     print(f"{name} ends")
 
 # def main():
@@ -11,7 +11,7 @@ import time
 
 #     task("task1",1) # 1st.task get started and completed it's work
 #     task("task2",1) # then 2nd task get start and complete it's work.  
-#     task("task3",1) # then only 3rd task start to work and completet 
+#     task("task3",1) # then only 3rd task start to work and complete it's work 
 
 #     # task it runs sequentially one after one 
 
@@ -32,18 +32,19 @@ import time
 #  Cleaner, more readable code
 
 
-async def task(name,seconds):
+async def task(name,seconds):  # coroutine
     print(f"{name} starts")
     await asyncio.sleep(seconds)# non-blocking
-    return f"{name} ends"
+    return f"{name} ends"  # inside async function only you can use await keyword
+    # await pauses the execution then resumes once it finishes the execution
 
 async def main():
     start_time = time.time()
 
     result = await asyncio.gather(   # gather() = Wait for ALL!
         task("task1",1),             # gather() runs coroutines concurrently
-        task("task1",1),             # gather() we are waiting for the entire task to finish
-        task("task1",1)
+        task("task2",1),             # gather() we are waiting for the entire task to finish
+        task("task3",1)
     )
 
     # gather() automatically does what we would manually do 
