@@ -203,10 +203,10 @@
     {
       "id": "uBxcSBP48zz37tS4mUCyD",
       "type": "text",
-      "x": 62.43925094604492,
-      "y": 603.8888791137277,
+      "x": 53.30732345581055,
+      "y": 594.6527340941965,
       "width": 696.3741455078125,
-      "height": 409.1148492729031,
+      "height": 436.3891725577633,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -220,20 +220,20 @@
       "index": "a9",
       "roundness": null,
       "seed": 1578506259,
-      "version": 42,
-      "versionNonce": 410930973,
+      "version": 103,
+      "versionNonce": 624551054,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1771663118718,
+      "updated": 1771840212075,
       "link": null,
       "locked": false,
-      "text": "content_crew = Crew(\n    agents=[market_researcher, seo_specialist, content_writer, quality_editor],\n    tasks=[research_task, seo_task, writing_task, quality_task],\n    process=Process.hierarchical,  # Just set this\n    verbose=True\n)\n\n# When you call kickoff(), CrewAI automatically:\n# - Creates a manager agent internally\n# - Assigns it coordination responsibilities\n# - You don't see it, but it's working behind the scenes\nresult = content_crew.kickoff(inputs=inputs)\n\n\n",
+      "text": "content_crew = Crew(\n    agents=[market_researcher, seo_specialist, content_writer, quality_editor],\n    tasks=[research_task, seo_task, writing_task, quality_task],\n    process=Process.hierarchical,  # Just set this\n    manager_llm = \"gpt-4.0-mini\",\n    verbose=True\n)\n\n# When you call kickoff(), CrewAI automatically:\n# - Creates a manager agent internally\n# - Assigns it coordination responsibilities\n# - You don't see it, but it's working behind the scenes\nresult = content_crew.kickoff(inputs=inputs)\n\n\n",
       "fontSize": 20.20320243322978,
       "fontFamily": 6,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "content_crew = Crew(\n    agents=[market_researcher, seo_specialist, content_writer, quality_editor],\n    tasks=[research_task, seo_task, writing_task, quality_task],\n    process=Process.hierarchical,  # Just set this\n    verbose=True\n)\n\n# When you call kickoff(), CrewAI automatically:\n# - Creates a manager agent internally\n# - Assigns it coordination responsibilities\n# - You don't see it, but it's working behind the scenes\nresult = content_crew.kickoff(inputs=inputs)\n\n\n",
+      "originalText": "content_crew = Crew(\n    agents=[market_researcher, seo_specialist, content_writer, quality_editor],\n    tasks=[research_task, seo_task, writing_task, quality_task],\n    process=Process.hierarchical,  # Just set this\n    manager_llm = \"gpt-4.0-mini\",\n    verbose=True\n)\n\n# When you call kickoff(), CrewAI automatically:\n# - Creates a manager agent internally\n# - Assigns it coordination responsibilities\n# - You don't see it, but it's working behind the scenes\nresult = content_crew.kickoff(inputs=inputs)\n\n\n",
       "autoResize": true,
       "lineHeight": 1.35
     },
@@ -314,8 +314,8 @@
     {
       "id": "b-lBMF4ddPh4sXUAgyle7",
       "type": "text",
-      "x": 74.66146087646484,
-      "y": 1378.663128883752,
+      "x": 67.94269561767578,
+      "y": 1368.0728426288692,
       "width": 689.4791259765625,
       "height": 513,
       "angle": 0,
@@ -331,11 +331,11 @@
       "index": "aD",
       "roundness": null,
       "seed": 865065245,
-      "version": 9,
-      "versionNonce": 1205196307,
+      "version": 83,
+      "versionNonce": 172773010,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1771663220618,
+      "updated": 1771840181846,
       "link": null,
       "locked": false,
       "text": "# You create the manager agent yourself\nmanager_agent = Agent(\n    role=\"Content Marketing Manager\",\n    goal=\"Coordinate the content creation process efficiently\",\n    backstory=\"You are an experienced manager who...\",\n    llm=llm,\n    allow_delegation=True  # Important: manager needs delegation rights\n)\n\ncontent_crew = Crew(\n    agents=[market_researcher, seo_specialist, content_writer, quality_editor],\n    tasks=[research_task, seo_task, writing_task, quality_task],\n    process=Process.hierarchical,\n    manager_agent=manager_agent,  # Pass your custom manager here\n    verbose=True\n)\n\n# Now YOUR manager is in control from the start\nresult = content_crew.kickoff(inputs=inputs)",
@@ -482,6 +482,7 @@
       "version": 330,
       "versionNonce": 2078868814,
       "isDeleted": false,
+<<<<<<< HEAD
       "boundElements": [
         {
           "id": "YGggep8GQ3Ks5B13qe-bN",
@@ -489,6 +490,10 @@
         }
       ],
       "updated": 1771762780858,
+=======
+      "boundElements": [],
+      "updated": 1771664421607,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "link": null,
       "locked": false
     },
@@ -721,6 +726,7 @@
       "version": 349,
       "versionNonce": 32925710,
       "isDeleted": false,
+<<<<<<< HEAD
       "boundElements": [
         {
           "id": "6KTOJrW7f1wG9VgqBicbb",
@@ -728,6 +734,10 @@
         }
       ],
       "updated": 1771762826450,
+=======
+      "boundElements": [],
+      "updated": 1771664384250,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "link": null,
       "locked": false
     },
@@ -1256,7 +1266,11 @@
       "versionNonce": 673537938,
       "isDeleted": false,
       "boundElements": [],
+<<<<<<< HEAD
       "updated": 1771762737616,
+=======
+      "updated": 1771664522512,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "link": null,
       "locked": false,
       "points": [
@@ -1453,7 +1467,11 @@
       "versionNonce": 1801394258,
       "isDeleted": false,
       "boundElements": [],
+<<<<<<< HEAD
       "updated": 1771762420363,
+=======
+      "updated": 1771664540176,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "link": null,
       "locked": false,
       "points": [
@@ -1590,7 +1608,11 @@
       "versionNonce": 697682318,
       "isDeleted": false,
       "boundElements": [],
+<<<<<<< HEAD
       "updated": 1771762999442,
+=======
+      "updated": 1771664560774,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "link": null,
       "locked": false,
       "points": [
@@ -1772,7 +1794,11 @@
       "versionNonce": 1245659790,
       "isDeleted": false,
       "boundElements": [],
+<<<<<<< HEAD
       "updated": 1771763119700,
+=======
+      "updated": 1771664725293,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "link": null,
       "locked": false,
       "text": "Manager assigns Research task → Researcher completes it\nManager validates the research output\nManager assigns Analyze task → Analyst completes it\nManager assigns Write task → Writer starts working\nWriter produces content but manager validates and notices: \n\"Hey, this is thin, not enough detail\"\nManager goes back → calls Researcher again for more info\nResearcher gathers additional content\nManager validates the new research\nManager might call Analyst again to analyze the new data\nManager assigns Write task again → Writer now has enough material\nFinal validation → Done!\n\nThe beauty is:\n\nThe manager acts like a quality control checkpoint\nIt's not locked into a one-way street\nIt can loop back to earlier tasks if needed\nIt ensures the final output meets requirements before considering the\n job complete",
@@ -2054,12 +2080,21 @@
       "lineHeight": 1.35
     },
     {
+<<<<<<< HEAD
       "id": "eUP02s1LbDcD2r4ityor4",
       "type": "freedraw",
       "x": 97.22677758818492,
       "y": 1568.342196423457,
       "width": 200.77040100097656,
       "height": 9.02777099609375,
+=======
+      "id": "qenaAheOjoD3FdgxBfsbx",
+      "type": "text",
+      "x": 22.512097870167338,
+      "y": 3578.4158949706098,
+      "width": 192.33985900878906,
+      "height": 25,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -2072,6 +2107,7 @@
       "frameId": null,
       "index": "b09",
       "roundness": null,
+<<<<<<< HEAD
       "seed": 1012434770,
       "version": 107,
       "versionNonce": 684472846,
@@ -2520,6 +2556,33 @@
       "y": 1744.7310787293445,
       "width": 24.2296142578125,
       "height": 1.70355224609375,
+=======
+      "seed": 582869132,
+      "version": 70,
+      "versionNonce": 687420084,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1771823896799,
+      "link": null,
+      "locked": false,
+      "text": "1.complex Workflows",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "1.complex Workflows",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "ZWV59HcfwuEw9fldgRrTD",
+      "type": "text",
+      "x": 4.152818237598979,
+      "y": 3639.509690746977,
+      "width": 684.1395263671875,
+      "height": 100,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -2532,6 +2595,7 @@
       "frameId": null,
       "index": "b0A",
       "roundness": null,
+<<<<<<< HEAD
       "seed": 868494226,
       "version": 23,
       "versionNonce": 1832878926,
@@ -2644,6 +2708,33 @@
       "y": 1763.4810634705555,
       "width": 136.18707275390625,
       "height": 2.7777862548828125,
+=======
+      "seed": 855769524,
+      "version": 184,
+      "versionNonce": 809983378,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1771840012409,
+      "link": null,
+      "locked": false,
+      "text": "Note: Ensure my_agents and my_tasks are defined prior to creating a\n Crew object, and for the hierarchical process, either\n manager_llm or manager_agent \nis also required",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Note: Ensure my_agents and my_tasks are defined prior to creating a\n Crew object, and for the hierarchical process, either\n manager_llm or manager_agent \nis also required",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "VndffClqm5njptmStDAEF",
+      "type": "freedraw",
+      "x": 218.8662276614271,
+      "y": 3577.0964151386665,
+      "width": 131.8837127685547,
+      "height": 55,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -2656,12 +2747,21 @@
       "frameId": null,
       "index": "b0B",
       "roundness": null,
+<<<<<<< HEAD
       "seed": 1644805714,
       "version": 45,
       "versionNonce": 1009875278,
       "isDeleted": false,
       "boundElements": null,
       "updated": 1771762303171,
+=======
+      "seed": 1409986062,
+      "version": 64,
+      "versionNonce": 16315918,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1771839605884,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "link": null,
       "locked": false,
       "points": [
@@ -2670,6 +2770,7 @@
           0
         ],
         [
+<<<<<<< HEAD
           2.853729248046875,
           0.3146820068359375
         ],
@@ -2840,11 +2941,260 @@
         [
           136.18707275390625,
           -1.7686614990234375
+=======
+          0.7725830078125,
+          -0.2256927490234375
+        ],
+        [
+          1.328125,
+          -0.2256927490234375
+        ],
+        [
+          2.4392242431640625,
+          -0.2256927490234375
+        ],
+        [
+          2.9948272705078125,
+          -0.2256927490234375
+        ],
+        [
+          4.10589599609375,
+          -0.2256927490234375
+        ],
+        [
+          5.7725982666015625,
+          -0.2256927490234375
+        ],
+        [
+          9.661453247070312,
+          0.8854217529296875
+        ],
+        [
+          10.772567749023438,
+          4.7743072509765625
+        ],
+        [
+          14.661468505859375,
+          8.107635498046875
+        ],
+        [
+          17.439239501953125,
+          10.329864501953125
+        ],
+        [
+          19.661483764648438,
+          11.996551513671875
+        ],
+        [
+          20.772567749023438,
+          11.996551513671875
+        ],
+        [
+          21.328109741210938,
+          13.107635498046875
+        ],
+        [
+          22.439254760742188,
+          14.218765258789062
+        ],
+        [
+          23.550338745117188,
+          14.218765258789062
+        ],
+        [
+          25.217025756835938,
+          15.329864501953125
+        ],
+        [
+          26.883682250976562,
+          16.44097900390625
+        ],
+        [
+          27.439224243164062,
+          17.552093505859375
+        ],
+        [
+          29.661453247070312,
+          18.663192749023438
+        ],
+        [
+          32.99479675292969,
+          20.885421752929688
+        ],
+        [
+          34.10591125488281,
+          20.885421752929688
+        ],
+        [
+          34.66145324707031,
+          20.885421752929688
+        ],
+        [
+          35.77256774902344,
+          20.885421752929688
+        ],
+        [
+          36.32814025878906,
+          20.885421752929688
+        ],
+        [
+          37.43922424316406,
+          20.885421752929688
+        ],
+        [
+          38.55033874511719,
+          20.329879760742188
+        ],
+        [
+          39.66145324707031,
+          19.21875
+        ],
+        [
+          40.77256774902344,
+          19.21875
+        ],
+        [
+          41.32810974121094,
+          18.663192749023438
+        ],
+        [
+          42.99479675292969,
+          18.107635498046875
+        ],
+        [
+          43.55033874511719,
+          17.552093505859375
+        ],
+        [
+          44.10588073730469,
+          17.552093505859375
+        ],
+        [
+          45.21702575683594,
+          16.996551513671875
+        ],
+        [
+          50.21702575683594,
+          14.218765258789062
+        ],
+        [
+          53.55033874511719,
+          11.440994262695312
+        ],
+        [
+          60.77256774902344,
+          8.107635498046875
+        ],
+        [
+          66.88371276855469,
+          4.21875
+        ],
+        [
+          69.66148376464844,
+          2.5520782470703125
+        ],
+        [
+          73.55033874511719,
+          0.3298797607421875
+        ],
+        [
+          79.66145324707031,
+          -2.4478912353515625
+        ],
+        [
+          81.88368225097656,
+          -4.1145782470703125
+        ],
+        [
+          82.43922424316406,
+          -4.670135498046875
+        ],
+        [
+          83.55036926269531,
+          -5.225677490234375
+        ],
+        [
+          83.55036926269531,
+          -5.78125
+        ],
+        [
+          85.21699523925781,
+          -6.3368072509765625
+        ],
+        [
+          85.77256774902344,
+          -6.3368072509765625
+        ],
+        [
+          87.43922424316406,
+          -8.003448486328125
+        ],
+        [
+          90.77256774902344,
+          -9.114578247070312
+        ],
+        [
+          94.10588073730469,
+          -11.336807250976562
+        ],
+        [
+          97.99476623535156,
+          -14.670135498046875
+        ],
+        [
+          102.43922424316406,
+          -17.447906494140625
+        ],
+        [
+          111.32814025878906,
+          -23.003463745117188
+        ],
+        [
+          122.43922424316406,
+          -29.114578247070312
+        ],
+        [
+          123.55036926269531,
+          -29.670135498046875
+        ],
+        [
+          124.66145324707031,
+          -30.225677490234375
+        ],
+        [
+          125.77256774902344,
+          -30.78125
+        ],
+        [
+          125.77256774902344,
+          -31.892364501953125
+        ],
+        [
+          126.88368225097656,
+          -31.892364501953125
+        ],
+        [
+          127.43922424316406,
+          -32.447906494140625
+        ],
+        [
+          131.32810974121094,
+          -34.11457824707031
+        ],
+        [
+          131.8837127685547,
+          -34.11457824707031
+        ],
+        [
+          131.8837127685547,
+          -34.11457824707031
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
         ]
       ],
       "pressures": [],
       "simulatePressure": true,
       "lastCommittedPoint": [
+<<<<<<< HEAD
         136.18707275390625,
         -1.7686614990234375
       ]
@@ -2856,6 +3206,19 @@
       "y": 1385.008860546992,
       "width": 13.812934875488281,
       "height": 217.67577362060547,
+=======
+        131.8837127685547,
+        -34.11457824707031
+      ]
+    },
+    {
+      "id": "_4zBqxkKPl2xLo85FcUHc",
+      "type": "freedraw",
+      "x": 23.866235290821635,
+      "y": 3606.540873146479,
+      "width": 191.32811737060547,
+      "height": 1.6666717529296875,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -2868,12 +3231,21 @@
       "frameId": null,
       "index": "b0C",
       "roundness": null,
+<<<<<<< HEAD
       "seed": 708634706,
       "version": 58,
       "versionNonce": 648175378,
       "isDeleted": false,
       "boundElements": null,
       "updated": 1771762323370,
+=======
+      "seed": 1854975890,
+      "version": 95,
+      "versionNonce": 1917251662,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1771839610461,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "link": null,
       "locked": false,
       "points": [
@@ -2882,6 +3254,7 @@
           0
         ],
         [
+<<<<<<< HEAD
           -0.6184921264648438,
           0.31467437744140625
         ],
@@ -3104,11 +3477,384 @@
         [
           -11.03515625,
           217.67577362060547
+=======
+          0.7725677490234375,
+          -0.2257080078125
+        ],
+        [
+          1.328125,
+          -0.2257080078125
+        ],
+        [
+          2.4392356872558594,
+          -0.2257080078125
+        ],
+        [
+          2.9948081970214844,
+          -0.2257080078125
+        ],
+        [
+          3.5503463745117188,
+          -0.2257080078125
+        ],
+        [
+          4.661457061767578,
+          -0.2257080078125
+        ],
+        [
+          6.328121185302734,
+          -0.2257080078125
+        ],
+        [
+          9.661457061767578,
+          -0.2257080078125
+        ],
+        [
+          12.994789123535156,
+          -0.2257080078125
+        ],
+        [
+          14.105918884277344,
+          -0.2257080078125
+        ],
+        [
+          16.328121185302734,
+          -0.2257080078125
+        ],
+        [
+          18.55034637451172,
+          -0.2257080078125
+        ],
+        [
+          20.772567749023438,
+          -0.2257080078125
+        ],
+        [
+          24.661453247070312,
+          -0.2257080078125
+        ],
+        [
+          27.439231872558594,
+          -0.2257080078125
+        ],
+        [
+          28.55034637451172,
+          -0.2257080078125
+        ],
+        [
+          31.328125,
+          -0.2257080078125
+        ],
+        [
+          33.55034637451172,
+          -0.2257080078125
+        ],
+        [
+          36.328125,
+          -0.2257080078125
+        ],
+        [
+          41.32811737060547,
+          -0.2257080078125
+        ],
+        [
+          46.32811737060547,
+          -0.2257080078125
+        ],
+        [
+          51.32811737060547,
+          -0.2257080078125
+        ],
+        [
+          55.217018127441406,
+          -0.2257080078125
+        ],
+        [
+          57.439231872558594,
+          -0.2257080078125
+        ],
+        [
+          58.55033874511719,
+          -0.2257080078125
+        ],
+        [
+          60.77257537841797,
+          -0.2257080078125
+        ],
+        [
+          62.439231872558594,
+          -0.2257080078125
+        ],
+        [
+          66.328125,
+          -0.2257080078125
+        ],
+        [
+          68.55033874511719,
+          -0.2257080078125
+        ],
+        [
+          71.88368225097656,
+          0.3298492431640625
+        ],
+        [
+          76.32811737060547,
+          0.3298492431640625
+        ],
+        [
+          81.32811737060547,
+          0.3298492431640625
+        ],
+        [
+          82.99479675292969,
+          0.3298492431640625
+        ],
+        [
+          84.66145324707031,
+          0.3298492431640625
+        ],
+        [
+          85.77256774902344,
+          0.3298492431640625
+        ],
+        [
+          87.99478912353516,
+          0.3298492431640625
+        ],
+        [
+          91.88367462158203,
+          0.885406494140625
+        ],
+        [
+          92.4392318725586,
+          0.885406494140625
+        ],
+        [
+          93.55034637451172,
+          0.885406494140625
+        ],
+        [
+          96.32811737060547,
+          0.885406494140625
+        ],
+        [
+          98.55034637451172,
+          0.885406494140625
+        ],
+        [
+          100.77259063720703,
+          0.885406494140625
+        ],
+        [
+          104.10588836669922,
+          1.4409637451171875
+        ],
+        [
+          108.55034637451172,
+          1.4409637451171875
+        ],
+        [
+          110.7725601196289,
+          1.4409637451171875
+        ],
+        [
+          112.4392318725586,
+          1.4409637451171875
+        ],
+        [
+          115.7725601196289,
+          1.4409637451171875
+        ],
+        [
+          117.99478912353516,
+          1.4409637451171875
+        ],
+        [
+          119.66144561767578,
+          1.4409637451171875
+        ],
+        [
+          122.99481964111328,
+          1.4409637451171875
+        ],
+        [
+          127.4392318725586,
+          1.4409637451171875
+        ],
+        [
+          131.3281478881836,
+          1.4409637451171875
+        ],
+        [
+          132.99478912353516,
+          1.4409637451171875
+        ],
+        [
+          134.1059341430664,
+          1.4409637451171875
+        ],
+        [
+          135.21700286865234,
+          1.4409637451171875
+        ],
+        [
+          136.32811737060547,
+          1.4409637451171875
+        ],
+        [
+          137.99478912353516,
+          1.4409637451171875
+        ],
+        [
+          138.55033111572266,
+          1.4409637451171875
+        ],
+        [
+          139.6614761352539,
+          1.4409637451171875
+        ],
+        [
+          142.99480438232422,
+          1.4409637451171875
+        ],
+        [
+          147.4392318725586,
+          1.4409637451171875
+        ],
+        [
+          151.88367462158203,
+          1.4409637451171875
+        ],
+        [
+          154.10590362548828,
+          0.885406494140625
+        ],
+        [
+          155.7725601196289,
+          0.885406494140625
+        ],
+        [
+          157.9947738647461,
+          0.3298492431640625
+        ],
+        [
+          159.10591888427734,
+          0.3298492431640625
+        ],
+        [
+          159.66146087646484,
+          0.3298492431640625
+        ],
+        [
+          160.21700286865234,
+          0.3298492431640625
+        ],
+        [
+          160.7725601196289,
+          0.3298492431640625
+        ],
+        [
+          162.9947738647461,
+          0.3298492431640625
+        ],
+        [
+          165.7725601196289,
+          0.3298492431640625
+        ],
+        [
+          168.55033111572266,
+          0.3298492431640625
+        ],
+        [
+          169.66144561767578,
+          0.3298492431640625
+        ],
+        [
+          171.32811737060547,
+          0.3298492431640625
+        ],
+        [
+          172.43921661376953,
+          0.3298492431640625
+        ],
+        [
+          172.99481964111328,
+          0.3298492431640625
+        ],
+        [
+          173.55034637451172,
+          0.3298492431640625
+        ],
+        [
+          174.66144561767578,
+          0.3298492431640625
+        ],
+        [
+          175.21700286865234,
+          0.3298492431640625
+        ],
+        [
+          176.32813262939453,
+          0.3298492431640625
+        ],
+        [
+          177.43921661376953,
+          0.3298492431640625
+        ],
+        [
+          179.66144561767578,
+          0.3298492431640625
+        ],
+        [
+          180.7725601196289,
+          0.3298492431640625
+        ],
+        [
+          181.3281478881836,
+          0.3298492431640625
+        ],
+        [
+          181.8836898803711,
+          0.3298492431640625
+        ],
+        [
+          182.9947738647461,
+          0.3298492431640625
+        ],
+        [
+          184.10591888427734,
+          0.3298492431640625
+        ],
+        [
+          185.7725601196289,
+          0.3298492431640625
+        ],
+        [
+          188.55033111572266,
+          0.3298492431640625
+        ],
+        [
+          190.2170181274414,
+          0.3298492431640625
+        ],
+        [
+          190.7725601196289,
+          0.3298492431640625
+        ],
+        [
+          191.32811737060547,
+          0.3298492431640625
+        ],
+        [
+          191.32811737060547,
+          0.3298492431640625
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
         ]
       ],
       "pressures": [],
       "simulatePressure": true,
       "lastCommittedPoint": [
+<<<<<<< HEAD
         -11.03515625,
         217.67577362060547
       ]
@@ -3120,6 +3866,19 @@
       "y": 1407.2310819215038,
       "width": 135.49261474609375,
       "height": 2.7777786254882812,
+=======
+        191.32811737060547,
+        0.3298492431640625
+      ]
+    },
+    {
+      "id": "_w-6PDGJtL3PjTNS11Ond",
+      "type": "text",
+      "x": 323.86621240263804,
+      "y": 3585.429743385737,
+      "width": 196.07981872558594,
+      "height": 25,
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -3132,6 +3891,7 @@
       "frameId": null,
       "index": "b0D",
       "roundness": null,
+<<<<<<< HEAD
       "seed": 1558364494,
       "version": 84,
       "versionNonce": 1322999758,
@@ -5634,11 +6394,23 @@
       "link": null,
       "locked": false,
       "text": "ALLOW_DELAGATION = TRUE",
+=======
+      "seed": 1258766674,
+      "version": 23,
+      "versionNonce": 1212278350,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1771839620611,
+      "link": null,
+      "locked": false,
+      "text": "hierarchical process ",
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
       "fontSize": 20,
       "fontFamily": 5,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
+<<<<<<< HEAD
       "originalText": "ALLOW_DELAGATION = TRUE",
       "autoResize": true,
       "lineHeight": 1.25
@@ -6289,6 +7061,11 @@
       "updated": 1771763117041,
       "link": null,
       "locked": false
+=======
+      "originalText": "hierarchical process ",
+      "autoResize": true,
+      "lineHeight": 1.25
+>>>>>>> 56024275949d35140ad72077105c050f6a62d007
     }
   ],
   "appState": {
