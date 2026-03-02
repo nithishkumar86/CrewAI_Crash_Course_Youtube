@@ -9,3 +9,4 @@ crewai
 # xmltodict
 # langchain-community
 # ipykernel
+# streamlit
